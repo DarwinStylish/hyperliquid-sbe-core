@@ -1,5 +1,5 @@
 CC       = gcc
-CFLAGS   = -O3 -Wall -Werror -std=c11
+CFLAGS = -O3 -Wall -Wextra -Werror -std=c11 -fstack-protector-strong -D_FORTIFY_SOURCE=2
 # All shared headers live in hft_core; adapters are header-only in hft_core/include
 CORE_INC = ../../engine/private/include
 INCLUDES = -I$(CORE_INC)
